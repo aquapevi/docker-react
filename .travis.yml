@@ -5,8 +5,8 @@ services:
 before_install:
   - docker build -t aquapevi/docker-react -f Dockerfile .
 
-#script:
-#  - docker run -e CI=true aquapevi/docker-react npm run test -- --coverage
+script:
+  - docker run -e CI=true aquapevi/docker-react sh
 
 deploy:
   provider: elasticbeanstalk 
